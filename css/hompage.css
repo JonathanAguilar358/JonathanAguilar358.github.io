@@ -88,6 +88,23 @@ main {
     border: 2px solid var(--main-boxes-color);
 }
 
+.itemBtn {
+    display: inline-block;
+    color: var(--main-text-color);
+    margin-top: 22%;
+    margin-bottom: 15%;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    /* border-radius: 20px; */
+    border: 1.5px solid var(--main-text-color);
+    transition: linear 0.5s;
+}
+.itemBtn:hover {
+    color: var(--main-background-color);
+    background-color: var(--main-text-color);
+}
+
 footer {
     position: absolute;
     bottom: 0;
