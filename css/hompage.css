@@ -68,35 +68,41 @@ body {
 main {
     display: block;
     margin-top: 5%;
-    /* border: 2px solid green; */
+    border: 2px solid green;
 }
 
 .grid-container {
+    width: 50%;
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 20px;
     row-gap: 20px;
     padding: 10px;
+    margin: 0 auto;
+    border: 2px solid red;
 }
 
 .grid-item {
     width: 100%;
-    height: 100%;
-    padding: 20px;
+    height: 100px;
+    padding: 0;
     text-align: center;
     border: 2px solid var(--main-boxes-color);
 }
 
 .itemBtn {
+    width: 100%;
+    height: 100%;
     display: inline-block;
     color: var(--main-text-color);
-    margin-top: 22%;
-    margin-bottom: 15%;
     padding: 10px 16px;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     /* border-radius: 20px; */
-    border: 1.5px solid var(--main-text-color);
+    /* border: 1.5px solid var(--main-text-color); */
+    border: none;
     transition: linear 0.5s;
 }
 .itemBtn:hover {
