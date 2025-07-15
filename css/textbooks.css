@@ -54,6 +54,27 @@ main {
     /* border: 2px solid blueviolet; */
 }
 
+/* ==================== START OF IMPORTANT NOTE CODE ===================== */
+
+.important-note-div {
+    width: 50%;
+    margin: 5% auto 5% auto;
+    padding: 10px 0;
+    border: 2px dashed red;
+}
+
+.important-note-div h1 {
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'UnB Pro Black Regular';
+    /* border: 2px solid green; */
+}
+
+.important-note-div p {
+    text-align: center;
+    /* border: 2px solid #000; */
+}
+
 /* ==================== START OF SECTION TITLE CODE ===================== */
 
 .section-title {
