@@ -63,31 +63,144 @@ body {
 .wrapper {
     width: 100%;
     margin: 0 auto;
+    /* border: 2px solid green; */
 }
 
 main {
     display: block;
     margin-top: 5%;
-    border: 2px solid green;
+    /* border: 2px solid blueviolet; */
 }
 
 .grid-container {
-    width: 50%;
+    width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 32% 32% 32%;
     column-gap: 20px;
     row-gap: 20px;
     padding: 10px;
     margin: 0 auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
+
+/* ==================== START OF GRID ITEM CODE ===================== */
 
 .grid-item {
     width: 100%;
-    height: 100px;
-    padding: 0;
+    height: 100%;
+    padding: 10px;
     text-align: center;
     border: 2px solid var(--main-boxes-color);
+}
+
+.grid-item h3 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-family: 'UnB Pro Black Bold';
+    font-size: 1.2rem;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+
+/* ==================== START OF ITEM IMAGE CODE ===================== */
+
+.item-img-div {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 5 / 3;
+    /* max-height: 40%; */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    /* border: 2px solid orange; */
+}
+
+.item-img-div img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* ==================== START OF DETAILS CODE ===================== */
+
+
+.details-div {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 80%;
+    height: 150px;
+    position: relative;
+    /* border: 2px solid limegreen; */
+}
+
+.details-btn {
+    width: 200px;
+    height: 30px;
+    padding: 0;
+    border: 2px solid #000;
+    border-radius: 15px;
+    background-color: #E4E0D5;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: width 0.6s ease, height 0.4s ease;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 99;
+}
+.details-btn:hover {
+    width: 100%;
+}
+
+.details-btn.expanded {
+    height: 100px;
+    width: 100%;
+}
+
+.button-label {
+    padding: 5px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hidden-text {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    padding: 10px 10%;
+    color: #000;
+    font-weight: normal;
+    text-align: left;
+    /* border: 2px solid #000; */
+}
+
+.details-btn.expanded .hidden-text {
+    opacity: 1;
+}
+
+.select-btn-div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid #222;
 }
 
 .itemBtn {
@@ -104,11 +217,20 @@ main {
     /* border: 1.5px solid var(--main-text-color); */
     border: none;
     transition: linear 0.5s;
+    z-index: -1;
 }
 .itemBtn:hover {
     color: var(--main-background-color);
     background-color: var(--main-text-color);
 }
+
+
+
+
+
+
+
+
 
 footer {
     position: absolute;
@@ -127,5 +249,14 @@ footer {
     .grid-container {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .item-img-div img {
+        width: 100%;
+        /* transform: scale(0.8); */
+    }
+
+    .grid-item h3 {
+        width: 100%;
     }
 }
