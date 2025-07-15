@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'UnB Pro Black';
+    src: url('fonts/unb_pro_black-webfont.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'UnB Pro Black Bold';
+    src: url('fonts/unb_pro_bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'UnB Pro Black Regular';
+    src: url('fonts/unb_pro_bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'UnB Office Regular';
+    src: url('fonts/unb-office_regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'A.ABF-Petit-Trial';
+    src: url('fonts/A.ABF-Petit-Trial.otf');
+}
+
+@font-face {
+    font-family: 'A.ABFLineaire-Light-Trial';
+    src: url('fonts/A.ABFLineaire-Light-Trial.otf');
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-text-color: #292826;
+    --main-boxes-color: #838270;
+    --main-background-color: #E4E0D5;
+    --rich-black: #252222;
+    --footer-text: #3b3b3b;
+    --creamy-white: #f7f7ef;
+}
+
+body {
+    background-color: #E4E0D5;
+}
+
+main {
+    display: block;
+    margin-top: 5%;
+    /* border: 2px solid green; */
+}
+
+/* ==================== START OF SECTION TITLE DIV CODE ===================== */
+
+.section-title {
+    text-align: center;
+    color: var(--main-text-color);
+    padding: 10px 0px;
+    font-family: 'UnB Pro Black Bold';
+    font-size: 2.5rem;
+    /* border: 2px solid orangered; */
+}
+
+/* ==================== START OF GRID CONTAINER DIV CODE ===================== */
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 32% 32% 32%;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 10px;
+    /* border: 2px solid cyan; */
+}
+
+.grid-item {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid var(--main-boxes-color);
+}
+
+#video1 {
+    width: 90%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.ppBtn {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.grid-title {
+    color: var(--main-text-color);
+    padding: 10px 0px;
+    font-family: 'A.ABFLineaire-Light-Trial';
+    /* border: 2px solid red; */
+}
+
+/* ==================== START OF IMAGE DIV CODE ===================== */
+
+.item-img-div {
+    width: 100%;
+    padding: 20px 0px;
+    /* border: 3px dashed navy; */
+}
+.item-img-div img {
+    margin: 0 auto;
+    object-fit: contain;
+    width: 50%;
+}
+
+/* ==================== START OF DETAILS DIV AND DETAILS BUTTON CODE ===================== */
+
+.details-div {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    text-align: center;
+    border: 2px solid red;
+}
+
+.details-btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #000;
+    transition: width 0.6s ease, height 0.4s ease;
+}
+.details-btn:hover {
+    width: 100%;
+    /* transform: scaleX(1.5); */
+}
+
+/* After click: keep full width and expand height */
+.details-btn.expanded {
+    height: 150px;
+    width: 100%;
+}
+
+/* Button label stays fixed at top */
+.button-label {
+    padding: 15px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Hidden content revealed below label */
+.hidden-text {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    color: black;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Fade in when expanded */
+.details-btn.expanded .hidden-text {
+    opacity: 1;
+}
+
+
+/* ==================== START OF COLOR OPTIONS DIV CODE ===================== */
+
+.color-options-div {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid yellowgreen;
+}
+
+.color-options-div img {
+    width: 100%;
+    height: 100%;
+    margin: 2%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+.color-options-div img:hover {
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+/* ==================== START OF ITEM BUTTON CODE ===================== */
+
+.itemBtn {
+    display: inline-block;
+    color: var(--main-text-color);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    /* border-radius: 20px; */
+    border: 1.5px solid var(--main-text-color);
+    transition: linear 0.5s;
+}
+.itemBtn:hover {
+    color: var(--main-background-color);
+    background-color: var(--main-text-color);
+}
+
+
+/* ==================== START OF SECOND/BOTTOM GRID CONTAINER CODE ===================== */
+
+.grid-container-02 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 32% 32% 32%;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 10px;
+    /* border: 2px solid green; */
+}
+
+.section-title-02 {
+    margin-top: 10%;
+    text-align: center;
+    color: var(--main-text-color);
+    padding: 10px 0px;
+    font-family: 'UnB Pro Black Bold';
+    font-size: 2.5rem;
+    /* border: 2px solid orangered; */
+}
+
+.color-options-div-02 {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid yellowgreen; */
+}
+
+.color-options-div-02 img {
+    width: 14%;
+    height: 14%;
+    margin: 2%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+.color-options-div-02 img:hover {
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+footer {
+    margin-top: 5%;
+    padding: 10px;
+    text-align: center;
+    color: var(--footer-text);
+    font-family: var(--Konrad-Regular);
+    border-top: 1px solid #ccc;
+}
+
+@media (max-width: 576px) {
+
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
